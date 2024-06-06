@@ -23,20 +23,23 @@ function sqrt(num1) {
 
 function calculate(expression) {
   const tokens = expression.split(' ');
-  if (token[1] === "sqrt") {
-  sqrt(token[2]);
-  } else if (token[2] === '+'){
-    add(token[1],token[2];)
-  } else if (token[2] === '-'){
-    add(token[1],token[2];)
-  } else if (token[2] === '*'){
-    multiply(token[1],token[2];)
-  } else if (token[2] === '/'){
-    divide(token[1],token[2];)
-  } else if (token[2] === '^'){
-    power(token[1],token[2];)
-  } else if (token[2] === '%'){
-    mod(token[1],token[2];)
+  const num1 = Number(tokens[0]);
+  const num2 = Number(tokens[2]);
+  const operator = tokens[1];
+  if (num1 === NaN) {
+  sqrt(Number(operator));
+  } else if (operator === '+'){
+    add(num1,num2;)
+  } else if (operator === '-'){
+    add(num1,num2;)
+  } else if (operator === '*'){
+    multiply(num1,num2;)
+  } else if (operator === '/'){
+    divide(num1,num2;)
+  } else if (operator === '^'){
+    power(num1,num2;)
+  } else if (operator === '%'){
+    mod(num1,num2;)
 }
 
 

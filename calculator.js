@@ -26,10 +26,14 @@ function calculate(expression) {
   const num1 = Number(tokens[0]);
   const num2 = Number(tokens[2]);
   const operator = tokens[1];
-  // if (num1 === NaN) {
-  // return sqrt(Number(operator));
+  // const sqrtNum = Number(tokens[1])
+  // if (num1 == NaN) {
+  //   return sqrt(sqrtNum);
   // }
-  
+  if (Number.isNaN(num1) || Number.isNaN(num2)){
+    alert('Not a number! Try again.');
+    return;
+  }
   if (operator === '+'){
     return add(num1,num2);
   } 
@@ -47,8 +51,8 @@ function calculate(expression) {
   } 
   if (operator === '%'){
     return mod(num1,num2);
+  }
 }
-
 
 
 

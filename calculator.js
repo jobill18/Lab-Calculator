@@ -19,6 +19,12 @@ function mod(num1, num2) {
 function sqrt(num1) {
   return num1 ** 0.5;
 }
+function factorial(num1) {
+  for (let i = num1 - 1; i > 0; i -= 1){
+    num *= i;
+  }
+  factorials.pop
+}
 
 
 function calculate(expression) {
@@ -69,8 +75,12 @@ if (tokens.length === 3){
     if (Number.isNaN(num1)){
       alert('Not a number! Try again');
       return;
-    } else {
+    } 
+    if (token[0] === 'sqrt') {
       return sqrt(num1);
+    }
+    if (token[0] === '!') {
+      return factorial(num1);
     }
   }
 else {

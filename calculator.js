@@ -27,19 +27,19 @@ function calculate(expression) {
   const num2 = Number(tokens[2]);
   const operator = tokens[1];
   if (num1 === NaN) {
-  sqrt(Number(operator));
+  return sqrt(Number(operator));
   } else if (operator === '+'){
-    add(num1,num2;)
+    return add(num1,num2;)
   } else if (operator === '-'){
-    add(num1,num2;)
+    return subtract(num1,num2;)
   } else if (operator === '*'){
-    multiply(num1,num2;)
+    return multiply(num1,num2;)
   } else if (operator === '/'){
-    divide(num1,num2;)
+    return divide(num1,num2;)
   } else if (operator === '^'){
-    power(num1,num2;)
+    return power(num1,num2;)
   } else if (operator === '%'){
-    mod(num1,num2;)
+    return mod(num1,num2;)
 }
 
 

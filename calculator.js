@@ -21,9 +21,9 @@ function sqrt(num1) {
 }
 function factorial(num1) {
   for (let i = num1 - 1; i > 0; i -= 1){
-    num *= i;
+    num1 *= i;
   }
-  factorials.pop
+  return num1
 }
 
 
@@ -76,11 +76,20 @@ if (tokens.length === 3){
       alert('Not a number! Try again');
       return;
     } 
-    if (token[0] === 'sqrt') {
+    if (operator === 'sqrt') {
       return sqrt(num1);
     }
-    if (token[0] === '!') {
-      return factorial(num1);
+    if (operator === '!') {
+      if(num1<0){
+        alert('Number must be a positive number!')
+        return
+      }
+      if(Number.isInteger(num1)){
+        return factorial(num1);
+      } else {
+        alert("Number must be an integer!");
+        return;
+      }
     }
   }
 else {

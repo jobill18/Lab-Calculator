@@ -23,15 +23,25 @@ function sqrt(num1) {
 
 function calculate(expression) {
   const tokens = expression.split(' ');
-  const num1 = Number(tokens[0]);
-  const num2 = Number(tokens[2]);
-  const operator = tokens[1];
+  let num1;
+  let num2;
+  let operator;
+if (tokens.length > 3){
+  alert('Not a valid input! Try again.')
+}
+if (tokens.length < 2){
+  alert('Not a valid input! Try again.')
+}
+if (tokens.length === 3){
+   num1 = Number(tokens[0]);
+   num2 = Number(tokens[2]);
+   operator = tokens[1];
   // const sqrtNum = Number(tokens[1])
   // if (num1 == NaN) {
   //   return sqrt(sqrtNum);
   // }
   if (Number.isNaN(num1) || Number.isNaN(num2)){
-    alert('Not a number! Try again.');
+    alert('Not a number! Try again');
     return;
   }
   if (operator === '+'){
@@ -53,9 +63,20 @@ function calculate(expression) {
     return mod(num1,num2);
   }
 }
-
-
-
+  if(tokens.length === 2) {
+    num1 = Number(tokens[1]);
+    operator = tokens[0];
+    if (Number.isNaN(num1)){
+      alert('Not a number! Try again');
+      return;
+    } else {
+      return sqrt(num1);
+    }
+  }
+else {
+  alert('Invalid operation! Try again.')
+}
+}
 
 
 

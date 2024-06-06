@@ -23,7 +23,7 @@ function factorial(num1) {
   for (let i = num1 - 1; i > 0; i -= 1){
     num1 *= i;
   }
-  return num1
+  return num1;
 }
 
 
@@ -33,10 +33,12 @@ function calculate(expression) {
   let num2;
   let operator;
 if (tokens.length > 3){
-  alert('Not a valid input! Try again.')
+  alert('Not a valid input! Try again.');
+  return;
 }
 if (tokens.length < 2){
-  alert('Not a valid input! Try again.')
+  alert('Not a valid input! Try again.');
+  return;
 }
 if (tokens.length === 3){
    num1 = Number(tokens[0]);

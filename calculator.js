@@ -26,20 +26,27 @@ function calculate(expression) {
   const num1 = Number(tokens[0]);
   const num2 = Number(tokens[2]);
   const operator = tokens[1];
-  if (num1 === NaN) {
-  return sqrt(Number(operator));
-  } else if (operator === '+'){
-    return add(num1,num2;)
-  } else if (operator === '-'){
-    return subtract(num1,num2;)
-  } else if (operator === '*'){
-    return multiply(num1,num2;)
-  } else if (operator === '/'){
-    return divide(num1,num2;)
-  } else if (operator === '^'){
-    return power(num1,num2;)
-  } else if (operator === '%'){
-    return mod(num1,num2;)
+  // if (num1 === NaN) {
+  // return sqrt(Number(operator));
+  // }
+  
+  if (operator === '+'){
+    return add(num1,num2);
+  } 
+  if (operator === '-'){
+    return subtract(num1,num2);
+  } 
+  if (operator === '*'){
+    return multiply(num1,num2);
+  } 
+  if (operator === '/'){
+    return divide(num1,num2);
+  } 
+  if (operator === '^'){
+    return power(num1,num2);
+  } 
+  if (operator === '%'){
+    return mod(num1,num2);
 }
 
 
